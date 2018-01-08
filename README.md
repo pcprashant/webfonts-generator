@@ -14,18 +14,21 @@ Features:
 ## Install
 
 ```
-npm install --save-dev webfonts-generator
+npm install --save-dev vusion-webfonts-generator
 ```
 
 ## Usage
 
 ```js
-const webfontsGenerator = require('webfonts-generator');
-
+const webfontsGenerator = require('vusion-webfonts-generator');
+const file = fs.createReadStream('src/close.svg');
+file.metadata = {
+	name: 'close',
+}
 webfontsGenerator({
   files: [
     'src/dropdown.svg',
-    'src/close.svg',
+    file,
   ],
   dest: 'dest/',
 }, function(error) {
@@ -55,7 +58,7 @@ Type: `function(error, result)`
 
 *required*
 
-Type: `array.<string>`
+Type: `array.<string>|array.<readStream> `
 
 List of SVG files.
 
