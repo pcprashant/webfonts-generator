@@ -29,7 +29,7 @@ var DEFAULT_OPTIONS = {
 	types: ['eot', 'woff', 'woff2'],
 	order: ['eot', 'woff2', 'woff', 'ttf', 'svg'],
 	rename: function(file) {
-		return path.basename(file, path.extname(file))
+		return typeof file === 'string' ? path.basename(file, path.extname(file)) : file.metadata.name;
 	},
 	formatOptions: {},
 	/**
