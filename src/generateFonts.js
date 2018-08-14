@@ -36,7 +36,7 @@ var generators = {
 				'descent',
 				'ascent',
 				'metadata',
-				'log',
+				'log'
 			)
 
 			if (options.formatOptions['svg']) {
