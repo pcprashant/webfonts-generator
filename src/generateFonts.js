@@ -24,7 +24,19 @@ var generators = {
 		fn: function(options, done) {
 			var font = new Buffer(0)
 			var svgOptions = _.pick(options,
-				'fontName', 'fontHeight', 'descent', 'normalize', 'round'
+				'fontName',
+				'fontId',
+				'fontStyle',
+				'fontWeight',
+				'fixedWidth',
+				'centerHorizontally',
+				'normalize',
+				'fontHeight',
+				'round',
+				'descent',
+				'ascent',
+				'metadata',
+				'log',
 			)
 
 			if (options.formatOptions['svg']) {
