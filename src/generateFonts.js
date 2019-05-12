@@ -75,7 +75,9 @@ var generators = {
 	ttf: {
 		deps: ['svg'],
 		fn: function(options, svgFont, done) {
-			var font = svg2ttf(svgFont, options.formatOptions['ttf'])
+			var formatOptions = options.formatOptions['ttf'] || {};
+			formatOptions.ts = 1484141760000;
+			var font = svg2ttf(svgFont, formatOptions)
 			font = new Buffer(font.buffer)
 			done(null, font)
 		}
