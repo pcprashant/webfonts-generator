@@ -49,6 +49,7 @@ var generators = {
 				.on('data', function(data) {
 					font = Buffer.concat([font, data])
 				})
+				.on('error', done)
 				.on('end', function() {
 					done(null, font.toString())
 				})
