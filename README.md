@@ -222,6 +222,14 @@ Type: `object`
 Specific codepoints for certain icons.
 Icons without codepoints will have codepoints incremented from `startCodepoint` skipping duplicates.
 
+### ligature
+
+Type: `boolean`
+<br>
+Default: `true`
+
+Enable or disable ligature function.
+
 ### fontName, normalize, fontHeight, round, descent
 
 Options that are passed directly to
