@@ -37,6 +37,7 @@ var DEFAULT_OPTIONS = {
 	 * http://en.wikipedia.org/wiki/Private_Use_(Unicode)
 	 */
 	startCodepoint: 0xF101,
+	ligature: true,
 	normalize: true
 }
 
