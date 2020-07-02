@@ -103,6 +103,10 @@ var webfont = function(options, done) {
 			result.generateCss = function(urls) {
 				return renderCss(options, urls)
 			}
+			if (options.html) {
+				var html = renderHtml(options)
+				result.html = html;
+			}
 			done(null, result)
 		})
 		.catch(function(err) { done(err) })
